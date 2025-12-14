@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "title": "Enterprise Network Security Infrastructure",
+        "description": "Designed and implemented a comprehensive network security infrastructure for a financial institution, reducing security incidents by 85%.",
+        "longDescription": "This project involved designing a multi-layered security architecture including firewall configuration, intrusion detection systems, and secure VPN implementation. The solution featured real-time threat monitoring, automated incident response workflows, and compliance reporting for PCI-DSS requirements.",
+        "technologies": [
+            "Cisco ASA",
+            "Palo Alto",
+            "SIEM",
+            "IDS/IPS",
+            "VPN"
+        ],
+        "category": "Network Security",
+        "date": "2023-11-15",
+        "image": "/images/project1.jpg",
+        "github": "https://github.com/jedidiah/network-security",
+        "liveUrl": "https://demo.jedidiah.com/network-security"
+    },
+    {
+        "id": 2,
+        "title": "Linux Server Automation & Monitoring",
+        "description": "Automated server deployment and monitoring for 50+ Linux servers using Ansible and Prometheus.",
+        "longDescription": "Implemented infrastructure-as-code practices using Ansible playbooks to automate deployment of Ubuntu/CentOS servers. Set up Prometheus/Grafana monitoring stack with custom dashboards for system metrics, application performance, and security alerts. Reduced manual deployment time by 90%.",
+        "technologies": [
+            "Ansible",
+            "Prometheus",
+            "Grafana",
+            "Bash",
+            "Docker"
+        ],
+        "category": "System Administration",
+        "date": "2023-08-20",
+        "image": "/images/project2.jpg",
+        "github": "https://github.com/jedidiah/linux-automation",
+        "liveUrl": "https://demo.jedidiah.com/server-monitoring"
+    },
+    {
+        "id": 3,
+        "title": "Cybersecurity Threat Intelligence Platform",
+        "description": "Built a threat intelligence dashboard aggregating data from multiple security feeds for proactive defense.",
+        "longDescription": "Developed a centralized platform collecting threat intelligence from OSINT feeds, internal logs, and industry reports. Implemented machine learning algorithms for threat correlation and risk scoring. The platform reduced mean time to detection (MTTD) from 4 hours to 15 minutes.",
+        "technologies": [
+            "Python",
+            "Elasticsearch",
+            "React",
+            "MongoDB",
+            "ML"
+        ],
+        "category": "Cybersecurity",
+        "date": "2023-05-10",
+        "image": "/images/project3.jpg",
+        "github": "https://github.com/jedidiah/threat-intel",
+        "liveUrl": "https://demo.jedidiah.com/threat-intel"
+    },
+    {
+        "id": 4,
+        "title": "Hybrid Cloud Infrastructure Migration",
+        "description": "Migrated on-premise infrastructure to AWS while maintaining hybrid connectivity and security compliance.",
+        "longDescription": "Orchestrated migration of 200+ virtual machines and services to AWS using a phased approach. Implemented Direct Connect for secure hybrid connectivity, maintained compliance with ISO 27001 standards throughout migration. Achieved 40% cost reduction while improving scalability.",
+        "technologies": [
+            "AWS",
+            "Terraform",
+            "Kubernetes",
+            "Direct Connect",
+            "VPC"
+        ],
+        "category": "Cloud Infrastructure",
+        "date": "2023-02-28",
+        "image": "/images/project4.jpg",
+        "github": "https://github.com/jedidiah/cloud-migration",
+        "liveUrl": "https://demo.jedidiah.com/cloud-migration"
+    },
+    {
+        "id": 5,
+        "title": "Endpoint Security & Hardening Framework",
+        "description": "Created a comprehensive endpoint security framework for Windows and Linux systems across enterprise environment.",
+        "longDescription": "Developed security baselines and hardening scripts for Windows 10/11 and major Linux distributions. Implemented Group Policy Objects (GPO) for Windows environments and configuration management for Linux. Reduced vulnerability exposure by 70% across 1000+ endpoints.",
+        "technologies": [
+            "PowerShell",
+            "Group Policy",
+            "CIS Benchmarks",
+            "SCCM",
+            "Bash"
+        ],
+        "category": "Endpoint Security",
+        "date": "2022-11-15",
+        "image": "/images/project5.jpg",
+        "github": "https://github.com/jedidiah/endpoint-security",
+        "liveUrl": "https://demo.jedidiah.com/endpoint-hardening"
+    },
+    {
+        "id": 6,
+        "title": "Network Performance Optimization Suite",
+        "description": "Toolset for monitoring and optimizing network performance across multiple geographical locations.",
+        "longDescription": "Built custom monitoring tools using Python and SNMP to track network performance metrics across 5 geographical locations. Implemented automated alerting for performance degradation and capacity planning recommendations. Improved network uptime from 99.5% to 99.95%.",
+        "technologies": [
+            "Python",
+            "SNMP",
+            "Network Monitoring",
+            "Data Visualization",
+            "APIs"
+        ],
+        "category": "Networking",
+        "date": "2022-08-30",
+        "image": "/images/project6.jpg",
+        "github": "https://github.com/jedidiah/network-optimization",
+        "liveUrl": "https://demo.jedidiah.com/network-optimization"
+    }
+]
