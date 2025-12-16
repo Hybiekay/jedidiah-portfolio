@@ -1,0 +1,35 @@
+{
+    "title": "Featured Projects",
+    "description": "A selection of my work in network security, system administration, and cybersecurity solutions",
+    "categories": [
+        "All",
+        "Network Security",
+        "System Administration",
+        "Cybersecurity",
+        "Cloud Infrastructure",
+        "Endpoint Security",
+        "Networking"
+    ],
+    "stats": [
+        {
+            "value": "6+",
+            "label": "Projects Completed"
+        },
+        {
+            "value": "100%",
+            "label": "Client Satisfaction"
+        },
+        {
+            "value": "85%",
+            "label": "Security Improvement"
+        },
+        {
+            "value": "99.95%",
+            "label": "System Uptime"
+        }
+    ],
+    "viewAll": {
+        "text": "View All Projects",
+        "link": "/projects"
+    }
+}

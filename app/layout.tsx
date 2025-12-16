@@ -8,11 +8,24 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Jedidiah Unekwu-Ojo David | Cybersecurity & Networking Expert',
-  description: 'Technology enthusiast with comprehensive expertise in computer networking, network security, and IT systems administration with more than 5 years of experience.',
-  keywords: ['Cybersecurity', 'Network Security', 'System Administration', 'IT Infrastructure', 'Linux', 'Windows'],
+  description:
+    'Technology enthusiast with comprehensive expertise in computer networking, network security, and IT systems administration with more than 5 years of experience.',
+  keywords: [
+    'Cybersecurity',
+    'Network Security',
+    'System Administration',
+    'IT Infrastructure',
+    'Linux',
+    'Windows',
+  ],
   authors: [{ name: 'Jedidiah Unekwu-Ojo David' }],
   creator: 'Jedidiah Unekwu-Ojo David',
   robots: 'index, follow',
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/apple-touch-icon.png',
+  },
 }
 
 export default function RootLayout({

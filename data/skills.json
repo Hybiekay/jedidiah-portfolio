@@ -1,0 +1,83 @@
+{
+    "title": "Technical Expertise",
+    "description": "Comprehensive skills spanning network infrastructure, system administration, and cybersecurity defense",
+    "skillCategories": [
+        {
+            "title": "Network Security",
+            "icon": "FiShield",
+            "skills": [
+                "Firewall Configuration",
+                "IDS/IPS",
+                "VPN Implementation",
+                "SIEM Management",
+                "Threat Detection"
+            ],
+            "color": "from-red-500/20 to-red-600/20"
+        },
+        {
+            "title": "System Administration",
+            "icon": "FiServer",
+            "skills": [
+                "Windows Server",
+                "Linux (Ubuntu/CentOS)",
+                "Active Directory",
+                "Group Policy",
+                "Patch Management"
+            ],
+            "color": "from-blue-500/20 to-blue-600/20"
+        },
+        {
+            "title": "Networking",
+            "icon": "FiWifi",
+            "skills": [
+                "TCP/IP Protocols",
+                "Routing & Switching",
+                "Network Design",
+                "Wireless Networking",
+                "VoIP"
+            ],
+            "color": "from-green-500/20 to-green-600/20"
+        },
+        {
+            "title": "Hardware & Troubleshooting",
+            "icon": "FiCpu",
+            "skills": [
+                "Hardware Diagnostics",
+                "System Repair",
+                "Performance Tuning",
+                "Disaster Recovery",
+                "Backup Solutions"
+            ],
+            "color": "from-purple-500/20 to-purple-600/20"
+        },
+        {
+            "title": "Cybersecurity",
+            "icon": "FiCode",
+            "skills": [
+                "Vulnerability Assessment",
+                "Incident Response",
+                "Security Auditing",
+                "Compliance",
+                "Penetration Testing"
+            ],
+            "color": "from-orange-500/20 to-orange-600/20"
+        },
+        {
+            "title": "Tools & Technologies",
+            "icon": "FiTool",
+            "skills": [
+                "Wireshark",
+                "Nmap",
+                "Metasploit",
+                "Ansible",
+                "Docker",
+                "AWS"
+            ],
+            "color": "from-gold-500/20 to-gold-600/20"
+        }
+    ],
+    "certifications": {
+        "title": "Certifications",
+        "displayMode": "badges"
+    }
+}

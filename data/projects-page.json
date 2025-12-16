@@ -1,0 +1,16 @@
+{
+    "title": "My Projects",
+    "description": "A collection of my work in network security, system administration, and cybersecurity solutions",
+    "categories": [
+        "All",
+        "Network Security",
+        "System Administration",
+        "Cybersecurity",
+        "Cloud Infrastructure",
+        "Endpoint Security",
+        "Networking"
+    ],
+    "filterPlaceholder": "Search projects...",
+    "noProjectsMessage": "No projects found matching your criteria.",
+    "clearFiltersText": "Clear all filters"
+}

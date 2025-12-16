@@ -1,0 +1,61 @@
+{
+    "about": {
+        "title": "About Me",
+        "description": "I am a technology enthusiast with comprehensive expertise in computer networking, network security, and IT systems administration with",
+        "highlightedText": "more than 5 years of professional experience",
+        "cta": {
+            "text": "Read more",
+            "link": "/about"
+        }
+    },
+    "features": {
+        "title": "My Approach",
+        "items": [
+            {
+                "icon": "FiTarget",
+                "title": "Blue Team Focus",
+                "description": "Specialized in defensive security with practical experience in threat detection and incident response"
+            },
+            {
+                "icon": "FiUsers",
+                "title": "Collaborative Approach",
+                "description": "Work effectively with teams to deliver secure and efficient IT solutions"
+            },
+            {
+                "icon": "FiTrendingUp",
+                "title": "Continuous Learning",
+                "description": "Committed to staying current with evolving cybersecurity threats and technologies"
+            },
+            {
+                "icon": "FiAward",
+                "title": "Problem Solver",
+                "description": "Creative and innovative approach to solving complex technical challenges"
+            }
+        ]
+    },
+    "timeline": {
+        "title": "Professional Journey",
+        "items": [
+            {
+                "year": "2024",
+                "role": "Senior Security Engineer",
+                "company": "Tech Security Corp"
+            },
+            {
+                "year": "2022",
+                "role": "Network Administrator",
+                "company": "Global Networks Inc"
+            },
+            {
+                "year": "2020",
+                "role": "IT Support Specialist",
+                "company": "Data Systems Ltd"
+            },
+            {
+                "year": "2018",
+                "role": "Junior Network Analyst",
+                "company": "Startup Tech Ventures"
+            }
+        ]
+    }
+}

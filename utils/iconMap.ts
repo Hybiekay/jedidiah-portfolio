@@ -1,0 +1,66 @@
+// utils/iconMap.ts
+import {
+    FiMail,
+    FiLinkedin,
+    FiFacebook,
+    FiTwitter,
+    FiSend,
+    FiGithub,
+    FiExternalLink,
+    FiCalendar,
+    FiTag,
+    FiFilter,
+    FiX,
+    FiSearch,
+    FiGrid,
+    FiList,
+    FiArrowRight,
+    FiTarget,
+    FiUsers,
+    FiTrendingUp,
+    FiAward,
+    FiBriefcase,
+    FiClock,
+    FiEye,
+    FiShield,
+    FiServer,
+    FiWifi,
+    FiCpu,
+    FiCode,
+    FiTool
+} from 'react-icons/fi'
+
+export const iconMap: Record<string, React.ComponentType> = {
+    FiMail,
+    FiLinkedin,
+    FiFacebook,
+    FiTwitter,
+    FiSend,
+    FiGithub,
+    FiExternalLink,
+    FiCalendar,
+    FiTag,
+    FiFilter,
+    FiX,
+    FiSearch,
+    FiGrid,
+    FiList,
+    FiArrowRight,
+    FiTarget,
+    FiUsers,
+    FiTrendingUp,
+    FiAward,
+    FiBriefcase,
+    FiClock,
+    FiEye,
+    FiShield,
+    FiServer,
+    FiWifi,
+    FiCpu,
+    FiCode,
+    FiTool
+}
+
+export const getIconComponent = (iconName: string): React.ComponentType => {
+    return iconMap[iconName] || FiMail
+}

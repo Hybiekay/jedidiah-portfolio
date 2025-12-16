@@ -1,25 +1,117 @@
-"use client"
+'use client'
 
 import { motion } from 'framer-motion'
-import { FiTarget, FiUsers, FiTrendingUp, FiAward, FiBriefcase, FiClock } from 'react-icons/fi'
+import { FiTarget, FiUsers, FiTrendingUp, FiAward, FiBriefcase, FiClock, FiEye } from 'react-icons/fi'
 import Link from 'next/link'
+import { useState } from 'react'
+import CertificateModal from '@/components/CertificateModal'
+
+// Define TypeScript interfaces
+interface Certificate {
+    name: string
+    image: string
+    year: string
+    issuer?: string
+    code?: string
+    validity?: string
+    level?: string
+}
+
+interface ValueItem {
+    icon: string
+    title: string
+    description: string
+}
+
+interface ExperienceItem {
+    year: string
+    role: string
+    company: string
+    duration: string
+}
+
+interface AboutPageData {
+    hero: {
+        title: string
+        subtitle: string
+    }
+    biography: {
+        title: string
+        paragraphs: string[]
+        highlight: string
+    }
+    values: {
+        title: string
+        items: ValueItem[]
+    }
+    experience: {
+        title: string
+        items: ExperienceItem[]
+    }
+    certifications: {
+        title: string
+        description: string
+        reference: string
+    }
+    cta: {
+        title: string
+        description: string
+        buttonText: string
+        buttonLink: string
+    }
+}
+
+interface CertificationsData {
+    title: string
+    description: string
+    items: Certificate[]
+}
+
+// Import your data with type assertion
+import aboutPageData from '@/data/about-page.json'
+import certificationsDataJson from '@/data/certifications.json'
 
 export default function AboutPage() {
-    const experience = [
-        { year: '2024-Present', role: 'Senior Security Engineer', company: 'Tech Security Corp', duration: '1 year' },
-        { year: '2022-2024', role: 'Network Administrator', company: 'Global Networks Inc', duration: '2 years' },
-        { year: '2020-2022', role: 'IT Support Specialist', company: 'Data Systems Ltd', duration: '2 years' },
-        { year: '2018-2020', role: 'Junior Network Analyst', company: 'Startup Tech Ventures', duration: '2 years' },
-    ]
+    const aboutData = aboutPageData as AboutPageData
+    const certificationsData = certificationsDataJson as CertificationsData
 
-    const certifications = [
-        'CompTIA Security+',
-        'Cisco Certified Network Associate (CCNA)',
-        'Certified Ethical Hacker (CEH)',
-        'Linux Professional Institute Certification (LPIC)',
-        'AWS Certified Solutions Architect',
-        'Microsoft Certified: Azure Fundamentals'
-    ]
+    const {
+        hero,
+        biography,
+        values,
+        experience,
+        certifications,
+        cta
+    } = aboutData
+
+    // Get certificates from shared file
+    const certificates = certificationsData.items
+
+    // State for modal with TypeScript types
+    const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null)
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+
+    // Icon mapping
+    const iconMap: Record<string, React.ComponentType> = {
+        FiTarget,
+        FiUsers,
+        FiTrendingUp,
+        FiAward,
+        FiBriefcase,
+        FiClock
+    }
+
+    // Handle certificate click
+    const handleCertificateClick = (certificate: Certificate) => {
+        setSelectedCertificate(certificate)
+        setIsModalOpen(true)
+    }
+
+    // Close modal
+    const closeModal = () => {
+        setIsModalOpen(false)
+        setTimeout(() => setSelectedCertificate(null), 300)
+    }
 
     return (
         <div className="min-h-screen">
@@ -31,9 +123,11 @@ export default function AboutPage() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-center"
                     >
-                        <h1 className="text-5xl lg:text-6xl font-bold mb-6 gradient-text">About Me</h1>
+                        <h1 className="text-5xl lg:text-6xl font-bold mb-6 gradient-text">
+                            {hero.title}
+                        </h1>
                         <p className="text-xl text-[var(--color-primary-gray)] max-w-3xl mx-auto">
-                            Technology enthusiast with 5+ years of expertise in cybersecurity, network infrastructure, and IT systems administration
+                            {hero.subtitle}
                         </p>
                     </motion.div>
                 </div>
@@ -48,53 +142,49 @@ export default function AboutPage() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                         >
-                            <h2 className="text-3xl font-bold mb-8 gradient-text">Professional Journey</h2>
+                            <h2 className="text-3xl font-bold mb-8 gradient-text">
+                                {biography.title}
+                            </h2>
 
                             <div className="space-y-6 text-[var(--color-primary-gray)] text-lg leading-relaxed">
-                                <p>
-                                    I am a technology enthusiast with comprehensive expertise in computer networking,
-                                    network security, and IT systems administration with <span className="font-semibold text-[var(--color-gold-600)]">
-                                        more than 5 years of professional experience</span>.
-                                </p>
-
-                                <p>
-                                    My proficiency spans both wired and wireless network infrastructures, allowing me to
-                                    design, implement, and maintain robust and efficient network environments. I am skilled
-                                    in hardware and software troubleshooting, ensuring optimal performance and reliability
-                                    across diverse computing systems.
-                                </p>
-
-                                <p>
-                                    With extensive experience in both Windows and Linux operating systems, I can efficiently
-                                    manage, configure, and secure enterprise-level environments. My cybersecurity focus is
-                                    oriented towards the blue team, with practical experience in threat detection, incident
-                                    response, and vulnerability management.
-                                </p>
-
-                                <p>
-                                    I bring a problem-solving mindset combined with creativity and innovation, enabling me
-                                    to deliver effective and secure IT solutions. Whether optimizing network performance,
-                                    securing systems, or addressing technical challenges, I approach every task with precision,
-                                    professionalism, and a commitment to continuous learning in the ever-evolving tech landscape.
-                                </p>
+                                {biography.paragraphs.map((paragraph, index) => (
+                                    <p key={index}>
+                                        {index === 0 ? (
+                                            <>
+                                                {paragraph} <span className="font-semibold text-[var(--color-gold-600)]">
+                                                    {biography.highlight}
+                                                </span>.
+                                            </>
+                                        ) : (
+                                            paragraph
+                                        )}
+                                    </p>
+                                ))}
                             </div>
 
                             {/* Values */}
                             <div className="mt-12">
-                                <h3 className="text-2xl font-bold mb-6 gradient-text">Core Values</h3>
+                                <h3 className="text-2xl font-bold mb-6 gradient-text">
+                                    {values.title}
+                                </h3>
                                 <div className="grid grid-cols-2 gap-4">
-                                    {[
-                                        { icon: <FiTarget />, title: 'Integrity', desc: 'Ethical and transparent practices' },
-                                        { icon: <FiUsers />, title: 'Collaboration', desc: 'Team-oriented approach' },
-                                        { icon: <FiTrendingUp />, title: 'Innovation', desc: 'Creative problem solving' },
-                                        { icon: <FiAward />, title: 'Excellence', desc: 'Quality-driven results' },
-                                    ].map((value, index) => (
-                                        <div key={index} className="bg-white p-4 rounded-xl border border-[var(--color-gold-200)]">
-                                            <div className="text-2xl text-[var(--color-gold-600)] mb-2">{value.icon}</div>
-                                            <h4 className="font-bold text-[var(--color-primary-dark)]">{value.title}</h4>
-                                            <p className="text-sm text-[var(--color-primary-gray)] mt-1">{value.desc}</p>
-                                        </div>
-                                    ))}
+                                    {values.items.map((value, index) => {
+                                        const IconComponent = iconMap[value.icon] || FiTarget
+
+                                        return (
+                                            <div key={index} className="bg-white p-4 rounded-xl border border-[var(--color-gold-200)]">
+                                                <div className="text-2xl text-[var(--color-gold-600)] mb-2">
+                                                    {IconComponent && <IconComponent />}
+                                                </div>
+                                                <h4 className="font-bold text-[var(--color-primary-dark)]">
+                                                    {value.title}
+                                                </h4>
+                                                <p className="text-sm text-[var(--color-primary-gray)] mt-1">
+                                                    {value.description}
+                                                </p>
+                                            </div>
+                                        )
+                                    })}
                                 </div>
                             </div>
                         </motion.div>
@@ -107,11 +197,11 @@ export default function AboutPage() {
                             {/* Experience Timeline */}
                             <div className="mb-12">
                                 <h3 className="text-2xl font-bold mb-6 gradient-text flex items-center gap-2">
-                                    <FiBriefcase /> Work Experience
+                                    <FiBriefcase /> {experience.title}
                                 </h3>
 
                                 <div className="space-y-6">
-                                    {experience.map((job, index) => (
+                                    {experience.items.map((job, index) => (
                                         <motion.div
                                             key={index}
                                             initial={{ opacity: 0, x: 20 }}
@@ -122,8 +212,12 @@ export default function AboutPage() {
                                             <div className="absolute left-[-8px] top-0 w-4 h-4 bg-[var(--color-gold-500)] rounded-full"></div>
                                             <div className="flex flex-wrap justify-between items-start mb-2">
                                                 <div>
-                                                    <h4 className="text-lg font-bold text-[var(--color-primary-dark)]">{job.role}</h4>
-                                                    <p className="text-[var(--color-gold-600)] font-medium">{job.company}</p>
+                                                    <h4 className="text-lg font-bold text-[var(--color-primary-dark)]">
+                                                        {job.role}
+                                                    </h4>
+                                                    <p className="text-[var(--color-gold-600)] font-medium">
+                                                        {job.company}
+                                                    </p>
                                                 </div>
                                                 <div className="text-sm text-[var(--color-primary-gray)] flex items-center gap-2">
                                                     <FiClock /> {job.duration}
@@ -139,39 +233,68 @@ export default function AboutPage() {
 
                             {/* Certifications */}
                             <div>
-                                <h3 className="text-2xl font-bold mb-6 gradient-text">Certifications</h3>
-                                <div className="flex flex-wrap gap-3">
-                                    {certifications.map((cert, index) => (
-                                        <motion.span
-                                            key={cert}
+                                <h3 className="text-2xl font-bold mb-6 gradient-text">
+                                    {certificationsData.title}
+                                </h3>
+                                <p className="text-primary-gray mb-6 text-sm">
+                                    {certificationsData.description}
+                                </p>
+                                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                    {certificates.map((cert, index) => (
+                                        <motion.button
+                                            key={cert.name}
                                             initial={{ opacity: 0, scale: 0.9 }}
                                             animate={{ opacity: 1, scale: 1 }}
                                             transition={{ delay: index * 0.1 }}
-                                            className="px-4 py-2 bg-gradient-to-r from-[var(--color-gold-500)]/10 to-[var(--color-gold-600)]/10 border border-[var(--color-gold-300)] text-[var(--color-gold-700)] rounded-full font-medium"
+                                            whileHover={{ scale: 1.05, y: -2 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            onClick={() => handleCertificateClick(cert)}
+                                            className="group relative px-4 py-3 bg-gradient-to-r from-[var(--color-gold-500)]/10 to-[var(--color-gold-600)]/10 border border-[var(--color-gold-300)] text-[var(--color-gold-700)] rounded-lg font-medium text-left overflow-hidden"
                                         >
-                                            {cert}
-                                        </motion.span>
+                                            {/* Hover effect */}
+                                            <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-gold-500)]/0 to-[var(--color-gold-600)]/0 group-hover:from-[var(--color-gold-500)]/5 group-hover:to-[var(--color-gold-600)]/5 transition-all duration-300"></div>
+
+                                            <div className="relative z-10">
+                                                <div className="flex justify-between items-start mb-1">
+                                                    <span className="font-semibold">{cert.name.split('(')[0]}</span>
+                                                    <FiEye className="opacity-0 group-hover:opacity-100 transition-opacity text-[var(--color-gold-600)]" />
+                                                </div>
+                                                <div className="flex justify-between items-center text-sm">
+                                                    <span className="text-[var(--color-primary-gray)]">View Certificate</span>
+                                                    <span className="text-[var(--color-gold-600)] font-semibold">{cert.year}</span>
+                                                </div>
+                                            </div>
+                                        </motion.button>
                                     ))}
                                 </div>
                             </div>
 
                             {/* Call to Action */}
                             <div className="mt-12 p-6 bg-gradient-to-r from-[var(--color-gold-500)]/10 to-transparent rounded-xl border border-[var(--color-gold-300)]">
-                                <h4 className="text-xl font-bold mb-4 gradient-text">Let&apos;s Work Together</h4>
+                                <h4 className="text-xl font-bold mb-4 gradient-text">
+                                    {cta.title}
+                                </h4>
                                 <p className="text-[var(--color-primary-gray)] mb-6">
-                                    Looking for a cybersecurity expert to secure your infrastructure or optimize your network?
+                                    {cta.description}
                                 </p>
                                 <Link
-                                    href="/contact"
+                                    href={cta.buttonLink}
                                     className="inline-flex items-center gap-2 bg-[var(--color-gold-500)] hover:bg-[var(--color-gold-600)] text-[var(--color-primary-dark)] font-semibold py-3 px-6 rounded-lg transition-colors"
                                 >
-                                    Get In Touch
+                                    {cta.buttonText}
                                 </Link>
                             </div>
                         </motion.div>
                     </div>
                 </div>
             </section>
+
+            {/* Certificate Modal */}
+            <CertificateModal
+                isOpen={isModalOpen}
+                certificate={selectedCertificate}
+                onClose={closeModal}
+            />
         </div>
     )
 }

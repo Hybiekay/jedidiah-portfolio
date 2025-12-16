@@ -1,0 +1,76 @@
+{
+    "hero": {
+        "title": "About Me",
+        "subtitle": "Technology enthusiast with 5+ years of expertise in cybersecurity, network infrastructure, and IT systems administration"
+    },
+    "biography": {
+        "title": "Professional Journey",
+        "paragraphs": [
+            "I am a technology enthusiast with comprehensive expertise in computer networking, network security, and IT systems administration with",
+            "My proficiency spans both wired and wireless network infrastructures, allowing me to design, implement, and maintain robust and efficient network environments. I am skilled in hardware and software troubleshooting, ensuring optimal performance and reliability across diverse computing systems.",
+            "With extensive experience in both Windows and Linux operating systems, I can efficiently manage, configure, and secure enterprise-level environments. My cybersecurity focus is oriented towards the blue team, with practical experience in threat detection, incident response, and vulnerability management.",
+            "I bring a problem-solving mindset combined with creativity and innovation, enabling me to deliver effective and secure IT solutions. Whether optimizing network performance, securing systems, or addressing technical challenges, I approach every task with precision, professionalism, and a commitment to continuous learning in the ever-evolving tech landscape."
+        ],
+        "highlight": "more than 5 years of professional experience"
+    },
+    "values": {
+        "title": "Core Values",
+        "items": [
+            {
+                "icon": "FiTarget",
+                "title": "Integrity",
+                "description": "Ethical and transparent practices"
+            },
+            {
+                "icon": "FiUsers",
+                "title": "Collaboration",
+                "description": "Team-oriented approach"
+            },
+            {
+                "icon": "FiTrendingUp",
+                "title": "Innovation",
+                "description": "Creative problem solving"
+            },
+            {
+                "icon": "FiAward",
+                "title": "Excellence",
+                "description": "Quality-driven results"
+            }
+        ]
+    },
+    "experience": {
+        "title": "Work Experience",
+        "items": [
+            {
+                "year": "2024-Present",
+                "role": "Senior Security Engineer",
+                "company": "Tech Security Corp",
+                "duration": "1 year"
+            },
+            {
+                "year": "2022-2024",
+                "role": "Network Administrator",
+                "company": "Global Networks Inc",
+                "duration": "2 years"
+            },
+            {
+                "year": "2020-2022",
+                "role": "IT Support Specialist",
+                "company": "Data Systems Ltd",
+                "duration": "2 years"
+            },
+            {
+                "year": "2018-2020",
+                "role": "Junior Network Analyst",
+                "company": "Startup Tech Ventures",
+                "duration": "2 years"
+            }
+        ]
+    },
+    "cta": {
+        "title": "Let's Work Together",
+        "description": "Looking for a cybersecurity expert to secure your infrastructure or optimize your network?",
+        "buttonText": "Get In Touch",
+        "buttonLink": "/contact"
+    }
+}

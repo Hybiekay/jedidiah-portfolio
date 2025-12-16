@@ -1,0 +1,60 @@
+{
+    "title": "Certifications",
+    "description": "Industry-recognized certifications validating technical expertise",
+    "items": [
+        {
+            "name": "CompTIA Security+",
+            "code": "SY0-701",
+            "year": "2023",
+            "issuer": "CompTIA",
+            "validity": "3 years",
+            "image": "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg",
+            "level": "Intermediate"
+        },
+        {
+            "name": "Cisco Certified Network Associate (CCNA)",
+            "code": "200-301",
+            "year": "2022",
+            "issuer": "Cisco",
+            "validity": "3 years",
+            "image": "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg",
+            "level": "Intermediate"
+        },
+        {
+            "name": "Certified Ethical Hacker (CEH)",
+            "code": "CEH v12",
+            "year": "2023",
+            "issuer": "EC-Council",
+            "validity": "3 years",
+            "image": "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg",
+            "level": "Advanced"
+        },
+        {
+            "name": "Linux Professional Institute Certification (LPIC)",
+            "code": "LPIC-1",
+            "year": "2021",
+            "issuer": "LPI",
+            "validity": "5 years",
+            "image": "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg",
+            "level": "Intermediate"
+        },
+        {
+            "name": "AWS Certified Solutions Architect",
+            "code": "SAA-C03",
+            "year": "2022",
+            "issuer": "Amazon Web Services",
+            "validity": "3 years",
+            "image": "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg",
+            "level": "Intermediate"
+        },
+        {
+            "name": "Microsoft Certified: Azure Fundamentals",
+            "code": "AZ-900",
+            "year": "2021",
+            "issuer": "Microsoft",
+            "validity": "Lifetime",
+            "image": "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg",
+            "level": "Fundamental"
+        }
+    ]
+}

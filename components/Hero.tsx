@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { FiMail, FiDownload, FiArrowRight } from 'react-icons/fi'
 import Link from 'next/link'
-
+import Image from 'next/image'
 export default function Hero() {
     const skills = ['Networking', 'Network Security', 'Cybersecurity', 'System Administration', 'Hardware/Software Troubleshooting', 'Prompt Engineering']
 
@@ -92,14 +92,14 @@ export default function Hero() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="relative"
                 >
-                    <div className="relative w-64 h-64 lg:w-80 lg:h-80 mx-auto">
+                    <div className="relative w-84 h-84 lg:w-98 lg:h-98 mx-auto">
                         {/* Animated background circles */}
                         <div className="absolute inset-0 border-4 border-gold-300/30 rounded-full animate-spin-slow" />
                         <div className="absolute inset-8 border-4 border-gold-400/20 rounded-full animate-spin-slow-reverse" />
 
                         {/* Profile Image Placeholder */}
                         <div className="absolute inset-8 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center">
-                            <span className="text-6xl font-bold text-primary-white">JD</span>
+                            <img src="/profile-pic.png" alt="Profile Picture" className="w-72 h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-white shadow-lg" />
                         </div>
                     </div>
 

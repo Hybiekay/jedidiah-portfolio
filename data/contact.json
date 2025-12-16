@@ -1,0 +1,66 @@
+{
+    "title": "Get In Touch",
+    "description": "Interested in collaborating or have a security challenge? Let's discuss how I can help secure your infrastructure.",
+    "contactInfo": {
+        "title": "Contact Information",
+        "methods": [
+            {
+                "icon": "FiMail",
+                "title": "Email",
+                "value": "davidjedidiah2016@gmail.com",
+                "href": "mailto:davidjedidiah2016@gmail.com"
+            },
+            {
+                "icon": "FiLinkedin",
+                "title": "LinkedIn",
+                "value": "David Jedidiah",
+                "href": "https://www.linkedin.com/in/david-jedidiah-351b80320"
+            },
+            {
+                "icon": "FiFacebook",
+                "title": "Facebook",
+                "value": "David Jedidiah",
+                "href": "https://www.facebook.com/profile.php?id=61575943362946"
+            },
+            {
+                "icon": "FiTwitter",
+                "title": "Twitter",
+                "value": "@CyberNet_Jed",
+                "href": "https://x.com/CyberNet_Jed"
+            }
+        ]
+    },
+    "availability": {
+        "title": "Availability",
+        "status": "Available for new projects",
+        "description": "Typically responds within 24 hours for urgent security matters"
+    },
+    "contactForm": {
+        "title": "Send a Message",
+        "fields": {
+            "name": {
+                "label": "Name *",
+                "placeholder": "Your name"
+            },
+            "email": {
+                "label": "Email *",
+                "placeholder": "your.email@example.com"
+            },
+            "subject": {
+                "label": "Subject *",
+                "placeholder": "Project inquiry or consultation"
+            },
+            "message": {
+                "label": "Message *",
+                "placeholder": "Tell me about your project or security needs..."
+            }
+        },
+        "submitButton": {
+            "text": "Send Message",
+            "sendingText": "Sending...",
+            "successMessage": "✅ Message sent successfully! I'll get back to you soon.",
+            "errorMessage": "❌ Something went wrong. Please try again or email me directly."
+        }
+    },
+    "privacyNotice": "Your information is secure and will only be used to respond to your inquiry. I follow strict data protection protocols in line with cybersecurity best practices."
+}

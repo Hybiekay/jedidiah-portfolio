@@ -1,0 +1,146 @@
+{
+    "brand": {
+        "logoInitials": "JD",
+        "name": "Jedidiah David",
+        "title": "Cybersecurity Expert",
+        "description": "Creating secure, efficient, and reliable IT solutions with precision and innovation.",
+        "tagline": "Securing the digital world, one system at a time."
+    },
+    "socialLinks": [
+        {
+            "icon": "FiLinkedin",
+            "label": "LinkedIn",
+            "href": "https://www.linkedin.com/in/david-jedidiah-351b80320",
+            "ariaLabel": "Visit LinkedIn profile"
+        },
+        {
+            "icon": "FiFacebook",
+            "label": "Facebook",
+            "href": "https://www.facebook.com/profile.php?id=61575943362946",
+            "ariaLabel": "Visit Facebook profile"
+        },
+        {
+            "icon": "FiTwitter",
+            "label": "Twitter",
+            "href": "https://x.com/CyberNet_Jed",
+            "ariaLabel": "Visit Twitter profile"
+        },
+        {
+            "icon": "FiMail",
+            "label": "Email",
+            "href": "mailto:davidjedidiah2016@gmail.com",
+            "ariaLabel": "Send email"
+        },
+        {
+            "icon": "FiGithub",
+            "label": "GitHub",
+            "href": "https://github.com/jedidiah",
+            "ariaLabel": "Visit GitHub profile"
+        }
+    ],
+    "navigation": {
+        "title": "Navigation",
+        "items": [
+            {
+                "label": "Home",
+                "href": "#home",
+                "icon": "FiHome"
+            },
+            {
+                "label": "About",
+                "href": "#about",
+                "icon": "FiUser"
+            },
+            {
+                "label": "Projects",
+                "href": "#projects",
+                "icon": "FiBriefcase"
+            },
+            {
+                "label": "Skills",
+                "href": "#skills",
+                "icon": "FiAward"
+            },
+            {
+                "label": "Contact",
+                "href": "#contact",
+                "icon": "FiMail"
+            }
+        ]
+    },
+    "services": {
+        "title": "Services",
+        "items": [
+            {
+                "label": "Network Security",
+                "href": "#"
+            },
+            {
+                "label": "System Administration",
+                "href": "#"
+            },
+            {
+                "label": "Cybersecurity Consulting",
+                "href": "#"
+            },
+            {
+                "label": "Cloud Infrastructure",
+                "href": "#"
+            },
+            {
+                "label": "Incident Response",
+                "href": "#"
+            }
+        ]
+    },
+    "contactInfo": {
+        "title": "Contact Info",
+        "items": [
+            {
+                "icon": "FiMail",
+                "label": "Email",
+                "value": "davidjedidiah2016@gmail.com",
+                "href": "mailto:davidjedidiah2016@gmail.com"
+            },
+            {
+                "icon": "FiPhone",
+                "label": "Phone",
+                "value": "+234 903 537 4335",
+                "href": "tel:+2349035374335"
+            },
+            {
+                "icon": "FiMapPin",
+                "label": "Location",
+                "value": "Abuja, Nigeria",
+                "href": "#"
+            }
+        ]
+    },
+    "legal": {
+        "links": [
+            {
+                "label": "Privacy Policy",
+                "href": "/privacy"
+            },
+            {
+                "label": "Terms of Service",
+                "href": "/terms"
+            },
+            {
+                "label": "Security Policy",
+                "href": "/security"
+            }
+        ],
+        "disclaimer": "This site follows strict security protocols. All communications are encrypted and protected."
+    },
+    "bottomBar": {
+        "copyright": "© {year} Jedidiah Unekwu-Ojo David. All rights reserved.",
+        "scrollToTop": {
+            "icon": "FiArrowUp",
+            "label": "Scroll to top",
+            "ariaLabel": "Scroll to top of page"
+        },
+        "builtWith": "Built with Next.js & Tailwind CSS",
+        "version": "v1.0.0"
+    }
+}

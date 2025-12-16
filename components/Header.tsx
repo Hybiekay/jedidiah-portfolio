@@ -42,7 +42,7 @@ export default function Header() {
                             transition={{ duration: 0.6 }}
                             className="w-8 h-8 bg-gradient-to-br from-[var(--color-gold-500)] to-[var(--color-gold-300)] rounded-lg flex items-center justify-center"
                         >
-                            <span className="text-[var(--color-primary-dark)] font-bold text-sm">JD</span>
+                            <img src="/profile-pic.png" alt="Logo" className="w-7 h-7 rounded-lg m-1" />
                         </motion.div>
                         <div className="hidden sm:block">
                             <h1 className="text-lg font-bold gradient-text leading-tight">Jedidiah David</h1>
