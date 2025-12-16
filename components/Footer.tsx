@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FiArrowUp } from 'react-icons/fi'
-import { getIconComponent } from '@/utils/iconMap'
+import { getIconComponent, IconComponentType } from '@/utils/iconMap'
 
 // Import data
 import footerData from '@/data/footer-enhanced.json'
@@ -101,7 +101,7 @@ export default function Footer() {
                         )}
                         <div className="flex items-center gap-3">
                             {data.socialLinks.map((link) => {
-                                const IconComponent = getIconComponent(link.icon)
+                                const IconComponent: IconComponentType = getIconComponent(link.icon)
 
                                 return (
                                     <a
@@ -125,7 +125,7 @@ export default function Footer() {
                         <h4 className="text-lg font-bold mb-6 gradient-text">{data.navigation.title}</h4>
                         <ul className="space-y-3">
                             {data.navigation.items.map((item) => {
-                                const IconComponent = item.icon ? getIconComponent(item.icon) : null
+                                const IconComponent: IconComponentType | null = item.icon ? getIconComponent(item.icon) : null
 
                                 return (
                                     <li key={item.label}>
@@ -170,7 +170,7 @@ export default function Footer() {
                         <h4 className="text-lg font-bold mb-6 gradient-text">{data.contactInfo.title}</h4>
                         <div className="space-y-4">
                             {data.contactInfo.items.map((item) => {
-                                const IconComponent = getIconComponent(item.icon)
+                                const IconComponent: IconComponentType = getIconComponent(item.icon)
 
                                 return (
                                     <div key={item.label} className="flex items-start gap-3">
