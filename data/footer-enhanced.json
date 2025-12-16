@@ -140,7 +140,7 @@
             "label": "Scroll to top",
             "ariaLabel": "Scroll to top of page"
         },
-        "builtWith": "Built with Next.js & Tailwind CSS",
+        "builtWith": "",
         "version": "v1.0.0"
     }
 }
